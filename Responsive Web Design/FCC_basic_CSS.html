@@ -1,0 +1,389 @@
+<!-- creating a CSS style block to change elememnt appreance
+<style>
+  h2{
+    color: blue;
+  }
+</style>
+ -->
+<!-- creating a class(use .) inside style block and ussing that class as attribute in the
+Classes allow you to use the same CSS styles on multiple HTML elements.
+changing font-size and font-family
+we can also specify non-standard, custom web fonts for use on our website.
+can copy the font(s) URL and paste it into the top of your code editor (before the opening style element)
+-->
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text{
+    color: red;
+  }
+  p{
+    font-size: 16px;
+    font-family: monospace;
+  }
+</style>
+
+<!-- specify how a font should degrade -->
+<style>
+  h2{
+    font-family: Lobster,monospace;
+  }
+</style>
+
+<!-- Size Your Images -->
+<style >
+  .smaller-image{
+    width: 100px;
+  }
+</style>
+
+<!--Add Borders Around Your Elements
+Remember that you can apply multiple classes to an element using its class attribute,
+separating each class name with a space-->
+<!--  % can also be used to change border radius -->
+
+<style>
+  .thick-green-border{
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10px;
+  }
+</style>
+
+<!-- Give a Background Color to a Element -->
+
+<style media="screen">
+  .silver-background{
+    background-color: silver;
+  }
+</style>
+
+<!-- USe an id attribute to style an element
+Note that inside your style element, you always reference classes by putting a . in front of their names.
+You always reference ids by putting a # in front of their names.-->
+
+<style media="screen">
+  #cat-photo-form{
+    background-color: green;
+  }
+</style>
+
+<!-- Use Attribute Selectors to Style Elements -->
+<style media="screen">
+  [type="checkbox"]{
+    margin: 10px 0px 15px 0px;
+
+  }
+</style>
+<h2 class="red-text">CatPhotoApp</h2>
+<main>
+  <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" class="smaller-iamge thick-green-border" alt="A cute orange cat lying on its back."></a>
+
+  <div class="silver-background">
+    <p>Things cats love:</p>
+    <ul>
+      <li>cat nip</li>
+      <li>laser pointers</li>
+      <li>lasagna</li>
+    </ul>
+    <p>Top 3 things cats hate:</p>
+    <ol>
+      <li>flea treatment</li>
+      <li>thunder</li>
+      <li>other cats</li>
+    </ol>
+  </div>
+
+  <form id="cat-photo-form" action="/submit-cat-photo">
+    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+    <label><input type="checkbox" name="personality" checked> Loving</label>
+    <label><input type="checkbox" name="personality"> Lazy</label>
+    <label><input type="checkbox" name="personality"> Energetic</label><br>
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+</main>
+
+<!-- Adjust the Padding(The padding area is the space between the content of the element and its border) of an Element -->
+<!-- An element's margin controls the amount of space between an element's border and surrounding elements.
+increasing the number will decrese element size and vice versa
+padding and margin can be controlled on all 4 sides
+Instead of specifying an element's padding-top, padding-right, padding-bottom, and padding-left properties individually, you can specify them all in one line,
+like this:
+padding: 10px 20px 10px 20px;
+same way for margin: top right bottom left-->
+<style>
+  .injected-text {
+    margin-bottom: -25px;
+    text-align: center;
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+  .yellow-box {
+    background-color: yellow;
+    padding: 10px;
+  }
+
+  .red-box {
+    background-color: crimson;
+    color: #fff;
+    padding: 20px;
+    margin: -15px;
+  }
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+  }
+</style>
+<h5 class="injected-text">margin</h5>
+
+<div class="box yellow-box">
+  <h5 class="box red-box">padding</h5>
+  <h5 class="box blue-box">padding</h5>
+</div>
+
+
+<!-- Style and inherit styles the html bosy element -->
+<!-- Prioritize one style over another
+class color overrides body color and if another class is declared it'll override the previous class
+class will be overridden by id attribute
+inline style overrides id attribute
+!important overrides everything-->
+<style>
+  body {
+    background-color: #000000;
+    font-family: monospace;
+    color: green;
+  }
+  .pink-text{
+    color: pink !important;
+  }
+  .blue-text{
+    color: blue;
+  }
+  #orange-text{
+    color: orange;
+  }
+</style>
+<h1 style="color: white" id="orange-text" class="pink-text blue-text">Hello World!</h1>
+
+<!-- Create a custom CSS Variable
+To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value  -->
+<style>
+  /* :root is a pseudo-class selector that matches the root element of the document, usually the html element.
+  By creating your variables in :root,
+  they will be available globally and can be accessed from any other selector in the style sheet.*/
+  :root {
+    /* Only change code below this line */
+      --penguin-belly: pink;
+    /* Only change code above this line */
+  }
+  .penguin {
+    /* Only change code below this line */
+    --penguin-skin: gray;
+    --penguin-belly: white; /* over-write :root selector*/
+    /* Only change code above this line */
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: 300px;
+    height: 300px;
+  }
+    /*Use a custom CSS Variable  var(--var_name, fallback_value)*/
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+    background: black;  /* this is the browser fallback */
+    background: var(--penguin-skin, black);
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .penguin-bottom {
+    top: 40%;
+    left: 23.5%;
+    background: var(--penguin-skin, black);;
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+  }
+
+  .right-hand {
+    top: 0%;
+    left: -5%;
+    background: var(--penguin-skin, black);;
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+
+  .left-hand {
+    top: 0%;
+    left: 75%;
+    background: var(--penguin-skin, black);;
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+
+  .right-cheek {
+    top: 15%;
+    left: 35%;
+    background: white;
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .left-cheek {
+    top: 15%;
+    left: 5%;
+    background: white;
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .belly {
+    top: 60%;
+    left: 2.5%;
+    background: white;
+    width: 95%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100%;
+  }
+
+  .right-feet {
+    top: 85%;
+    left: 60%;
+    background: orange;
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2222;
+  }
+
+  .left-feet {
+    top: 85%;
+    left: 25%;
+    background: orange;
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2222;
+  }
+
+  .right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .sparkle {
+    top: 25%;
+    left: 15%;
+    background: white;
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+  }
+
+  .blush-right {
+    top: 65%;
+    left: 15%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .blush-left {
+    top: 65%;
+    left: 70%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-top {
+    top: 60%;
+    left: 40%;
+    background: orange;
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-bottom {
+    top: 65%;
+    left: 42%;
+    background: orange;
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  body {
+    background:#c6faf1;
+  }
+
+  .penguin * {
+    position: absolute;
+  }
+</style>
+<div class="penguin">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>

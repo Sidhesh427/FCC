@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!DOCTYPE HTML5>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 id="title">Men's Grooming Survey Form</h1>
+    <p id="description"><em>Thank you for helping us with the survey</em></p>
+    <form id="survey-form" class="" action="index.html" method="post">
+      <div class="form-control">
+        <label id="name-label" for="name"> Name</label>
+          <input id="name"type="text" placeholder="Enter your Name" required>
+      </div>
+
+      <div class="form-control">
+        <label id="email-label" for="email"> Email </label>
+          <input id="email" type="email" placeholder="Enter your email address" required>
+      </div>
+
+      <div class="form-control">
+        <label id="number-label" for="number"> Age <small>(optional)</small> </label>
+          <input id="number" type="number" min="13" max="99" placeholder="Enter your Age" required>
+      </div>
+
+      <div class="form-control">
+        <label id="user freq" for="dropdown"> How often do you use personal care products? </label>
+        <select id="dropdown">
+          <option value="Daily">Daily</option>
+          <option value="Twice/Thrice a Week">Twice/Thrice a Week</option>
+          <option value="Ocassionally">Ocassionally</option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label> Which factor affects your purchase the most? </label>
+        <label for="purchase1"></label>
+          <input id="purchase1" type="radio" value="brand" name="purchase-factor"> Brand
+        <label for="purchase2"></label>
+          <input id="purchase2" type="radio" value="price" name="purchase-factor"> Price
+        <label for="purchase3"></label>
+          <input id="purchase3" type="radio" value="ingrdients" name="purchase-factor"> Ingredients
+      </div>
+
+      <div class="form-control">
+        <label id="most used" for="dropdown"> How would you categorize most of the products you use?</label>
+        <select id="dropdown">
+          <option value="Organic">Organic</option>
+          <option value="Inorganic">Inorganic</option>
+          <option value="Don't know">Don't know</option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label> what kind of products do you use? <small>(select all that apply)</small> </label>
+        <label for="purchase1"></label>
+          <input id="purchase1" type="checkbox" value="facewash" name="category"> Facewash
+        <label for="purchase2"></label>
+          <input id="purchase2" type="checkbox" value="deo/perfumes" name="category"> Deodorants/Perfumes
+        <label for="purchase3"></label>
+          <input id="purchase3" type="checkbox" value="sunscreen lotion "name="category"> Sunscreen Lotions
+        <label for="purchase3"></label>
+          <input id="purchase3" type="checkbox" value="moisturizer" name="category"> Moisturizers
+        <label for="purchase3"></label>
+          <input id="purchase3" type="checkbox" value="hairstyling products" name="category"> Hair-styling Products
+      </div>
+
+      <div class="form-control">
+        <label for="comments"> Any Comments?
+          <textarea name="comments" id="comments" placeholder="Enter your comments here"></textarea>
+        </label>
+      </div>
+
+      <button id="submit" type="submit" value="submit">Submit</button>
+    </form>
+  </body>
+</html>
+
+
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+<style media="screen">
+  body{
+    background-color: #dfe6e9;
+    font-family: "PT Sans", sans-serif;
+    text-align: center;
+    margin: auto;
+  }
+  p{
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  h1{
+    margin-bottom: 0px;
+  }
+  form{
+    background-color: #ffeaa7;
+    border-radius: 15px;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 30px;
+  }
+  .form-control{
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .form-control label{
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-control input,
+  .form-control select,
+  .form-control textarea{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: inherit;
+    margin-top: 10px;
+  }
+  .form-control input[type="radio"],
+  .form-control input[type="checkbox"]{
+    width:auto;
+    display: inline-block;
+  }
+  button{
+    background-color: #00b894;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    font-family: inherit;
+    border-radius: 5px;
+    font-size: 15px;
+
+  }
+
+</style>

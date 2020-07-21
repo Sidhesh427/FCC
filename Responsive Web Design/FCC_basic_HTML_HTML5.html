@@ -1,0 +1,99 @@
+<!DOCTYPE HTML5>
+<html>
+  <!-- <h1>Hello World</h1> -->
+  <h2>CatPhotoApp</h2>
+  <main>
+    <!--
+    anchor tag to link internal content
+    assign a link's href attribute to a # symbol plus the
+    value of id attribute for the element that needs
+    to be internally linked
+    -->
+    <a href="#footer">Jump to Bottom </a>
+    <img src="https://bit.ly/fcc-relaxing-cat" alt="Two cute kittens relaxing">
+    <p>
+      Kitty ipsum dolor sit amet,
+      shed everywhere shed everywhere stretching attack your ankles chase the red dot,
+      hairball run catnip eat the grass sniff
+    </p>
+    <p>
+      Purr jump eat the grass rip the couch scratched sunbathe,
+      shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
+    </p>
+  </main>
+  <div>
+    <p>
+      View more<a href="http://freecatphotoapp.com"> Cat Photos </a>
+      <!-- to create a dead link put "#" in href attribute -->
+    </p>
+
+    <!--anchor tag to link external websites -->
+    <a href="http://freecatphotoapp.com" target="_blank"> Cat Photos </a>
+
+    <!-- to turn an image into a link insert a img tag -->
+    <a href="#"> <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+    <!-- Creating unordered list -->
+    <ul>
+      <li>milk</li>
+      <li>fish</li>
+      <li>wool</li>
+    </ul>
+
+    <!-- Creating ordered list -->
+    <ol>
+      <li>milk</li>
+      <li>fish</li>
+      <li>wool</li>
+    </ol>
+  </div>
+  <!-- Creating text field with required attribute-->
+  <input type="text" placeholder="this is a placeholder text" required>
+
+  <!-- Creating form element with nested input text field-->
+  <form action="/url-where-you-want-to-submit-form-data">
+    <input type="text" placeholder="cat photo URL">
+
+    <!-- Add a Submit Button to a Form -->
+    <button type="submit"> Submit </button>
+
+    <!--Create a Set of Radio Buttons -->
+    <label for="indoor">
+      <input id="indoor" type="radio" name="indoor-outdoor"> Indoor
+    </label>
+
+    <label for="outdoor">
+      <input id="outdoor" type="radio" name="indoor-outdoor"> Oudoor
+    </label>
+    <br>
+    <!--Create checkboxes -->
+    <!--Use the value attribute with Radio Buttons and Checkboxes
+    When a form gets submitted, the data is sent to the server and includes entries for the options selected.
+    Inputs of type radio and checkbox report their values from the value attribute.
+
+    -- Check Radio Buttons and Checkboxes by Default
+    set a checkbox or radio button to be checked by default using the checked attribute
+    add the word "checked" to the inside of an input element
+   -->
+    <label for="loving">
+      <input id="loving" value="loving "type="checkbox" name="personality" checked> Loving
+    </label>
+    <label for="sneaky">
+        <input id="sneaky" value="sneaky" type="checkbox" name="personality"> Sneaky
+    </label>
+    <label for="grumppy">
+        <input id="grumppy" value="grumppy "type="checkbox" name="perosnality"> Grumppy
+    </label>
+  </form>
+
+  <footer id="footer">Copyright CatPhotoApp
+  </footer>
+
+  <!-- Head and body tag
+  You can add another level of organization in your HTML document within the html tags with the head and body elements.
+  Any markup with information about your page would go into the head tag.
+  Then any markup with the content of the page (what displays for a user) would go into the body tag.
+
+  Metadata elements, such as link, meta, title, and style, typically go inside the head element.
+  -->
+</html>

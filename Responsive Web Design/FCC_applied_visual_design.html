@@ -1,0 +1,433 @@
+<!DOCTYPE HTML5>
+<html lang="en" dir="ltr">
+<style media="screen">
+  /* 1-Create Visual Balance Using the text-align Property */
+  h4{
+    text-align: center;
+    /*3-Adjust the Height of an Element Using the height Property*/
+    height: 25px;
+    /*8-Adjust the background-color Property of Text*/
+    background-color: rgba(45, 45, 45, 0.1);
+    padding:10px;
+    /*9-Adjust the Size of a Header Versus a Paragraph Tag*/
+    font-size: 27px;
+    /*12-Use the text-transform Property to Make Text Uppercase*/
+    text-transform: uppercase;
+    /*14-Set the font-weight for Multiple Heading Elements*/
+    font-weight: 500;
+    /*16-Adjust the Hover State of an Anchor Tag*/
+    a{
+      color:black;
+    }
+    a:hover{
+      color:#000000;
+    }
+  }
+  p{
+    /*Move a Relatively Positioned Element with CSS Offsets
+    The CSS offsets of top or bottom, and left or right tell the browser how far to offset an item
+    relative to where it would sit in the normal flow of the document
+    You're offsetting an element away from a given spot, which moves the element away from the referenced side (effectively, the opposite direction)*/
+    position: relative; /*absolute is used to fix a position of the element with the parent element and fixed is used to fix wrt browser window*/
+    right: 15px;      /*move element to the left*/
+    text-align: justify;
+    line-height: 25px;
+    font-size: 16px
+  }
+  .links {
+    margin-right: 20px;
+    text-align: left;
+    /*11-Decrease the Opacity of an Element*/
+    opacity: 0.7;
+  }
+
+  /*10-Add a box-shadow to a Card-like Element
+  x-offset y-offset blur-radius spread-radius color*/
+  #thumbnail{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  .fullCard {
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+    /*2-Adjust the Width of an Element Using the width Property*/
+    width: 245px;
+  }
+  .cardContent {
+    padding: 10px;
+  }
+</style>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="fullCard">
+  <div class="cardContent">
+    <div class="cardText">
+      <h4>Google</h4>
+      <!-- 7-Create a Horizontal Line Using the hr Element -->
+      <hr>
+      <!-- 4-Use the strong Tag to Make Text Bold -->
+      <!-- 5-Use the u Tag to Underline Text-->
+      <!-- 6-Use the em Tag to Italicize Text-->
+      <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+    </div>
+    <div class="cardLinks">
+      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a>
+      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
+
+<style media="screen">
+  /*Change the Position of Overlapping Elements with the z-index Property*/
+  div {
+    width: 60%;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  .first {
+    background-color: red;
+    position: absolute;
+    z-index:2;    /*will push Overlapping elements with higher index to the Top*/
+  }
+  .second {
+    background-color: blue;
+    position: absolute;
+    left: 40px;
+    top: 50px;
+    z-index: 1;
+  }
+</style>
+
+<div class="first"></div>
+<div class="second"></div>
+
+<!-- Applied Visual Design: Center an Element Horizontally Using the margin Property -->
+<style>
+  div {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    margin:auto;
+  }
+</style>
+<div></div>
+
+<!-- Applied Visual Design: Adjust the Tone of a Color -->
+<style>
+  header {
+    background-color: hsl(180, 90%, 35%);
+    color: #FFFFFF;
+  }
+
+  nav {
+
+  }
+
+  h1 {
+    text-indent: 10px;
+    padding-top: 10px;
+    /*Use the CSS Transform scale Property to Change the Size of an Element*/
+  }
+  /*add :hover to the element to change it on hover only*/
+  h1:hover{
+    transform: scale(1.5);
+  }
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
+
+<header>
+  <h1>Cooking with FCC!</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Classes</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- Applied Visual Design: Create a Gradual CSS Linear Gradient -->
+<style>
+  div {
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+  background: linear-gradient(35deg, #CCFFFF, #FFCCCC)
+  }
+
+</style>
+
+<div></div>
+
+<!-- Create Texture by Adding a Subtle Pattern as a Background Image -->
+<style>
+  body {
+    background:url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png)
+  }
+</style>
+
+<!-- Learn How the CSS @keyframes and animation Properties Work -->
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+  }
+
+  #rect {
+      animation-name: rainbow;
+      animation-duration: 4s;
+  }
+  /*Create Movement Using CSS Animation */
+  @keyframes rainbow {
+    0% {
+      background-color: blue;
+      top: 0px;
+      left:0px;
+    }
+    50% {
+      background-color: green;
+      top: 50px;
+      left: 25px;
+    }
+    100% {
+      background-color: yellow;
+      top: 0px;
+      left:-25px;
+    }
+  }
+
+</style>
+<div id="rect"></div>
+
+<!--Use CSS Animation to Change the Hover State of a Button -->
+<style>
+  button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+
+  button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    /*Modify Fill Mode of an Animation (continue the animation)*/
+    animation-fill-mode: forwards;
+  }
+  @keyframes background-color{
+    100%{
+      background-color: #4791d0;
+    }
+  }
+
+</style>
+
+<button>Register</button>
+
+<!-- Create Visual Direction by Fading an Element from Left to Right -->
+<style>
+
+  #ball {
+    width: 70px;
+    height: 70px;
+    margin: 50px auto;
+    position: fixed;
+    left: 20%;
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+
+  @keyframes fade {
+    50% {
+      left: 60%;
+      opacity:0.1;
+    }
+  }
+
+</style>
+
+<div id="ball"></div>
+
+
+<!-- Animate Elements Continually Using an Infinite Animation Count -->
+<style>
+
+  #ball {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bounce{
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 249px;
+      width: 130px;
+      height: 70px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+</style>
+<div id="ball"></div>
+
+<!-- Make a CSS Heartbeat using an Infinite Animation Count -->
+<style>
+  .back {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation-name: backdiv;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  .heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .heart:after {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart:before {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+  @keyframes backdiv {
+    50% {
+      background: #ffe6f2;
+    }
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+
+</style>
+<div class="back"></div>
+<div class="heart"></div>
+
+<!-- Change Animation Timing with Keywords-->
+<style>
+
+  .balls {
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #ball1 {
+    left:27%;
+    animation-timing-function: linear;
+  }
+  #ball2 {
+    left:56%;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes bounce {
+    0% {
+      top: 0px;
+    }
+    100% {
+      top: 249px;
+    }
+  }
+
+</style>
+
+<div class="balls" id="ball1"></div>
+<div class="balls" id="ball2"></div>
+
+<!-- Bezier Curve -->
